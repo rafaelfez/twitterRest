@@ -1,3 +1,8 @@
+// const envPath = process.env.NODE_ENV
+//   ? `.env.${process.env.NODE_ENV}`
+//   : '.env';
+
+// require('dotenv').config({ path: envPath });
 require('dotenv').config();
 
 const app = require('express')();
@@ -20,3 +25,5 @@ app.use('/api', require('./app/routes'));
 app.use(Raven.errorHandler());
 
 app.listen(3000);
+
+module.exports = app;
