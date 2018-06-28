@@ -1,9 +1,8 @@
-// const envPath = process.env.NODE_ENV
-//   ? `.env.${process.env.NODE_ENV}`
-//   : '.env';
+const envPath = process.env.NODE_ENV
+  ? `.env.${process.env.NODE_ENV}`
+  : '.env';
 
-// require('dotenv').config({ path: envPath });
-require('dotenv').config();
+require('dotenv').config({ path: envPath });
 
 const app = require('express')();
 const mongoose = require('mongoose');
